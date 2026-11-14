@@ -27,7 +27,6 @@ public class AnalizadorFuncion {
 
     public static boolean analizarFuncion(String codigo) {
 
-        // Expresion regular para identificar la estructura
         String patron =
             "(public |private |protected )?" +
             "(static )?" +
@@ -43,7 +42,6 @@ public class AnalizadorFuncion {
             return false;
         }
 
-        // Comprobar que las llaves estén equilibradas
         int llaves = 0;
 
         for (char c : codigo.toCharArray()) {
@@ -61,8 +59,7 @@ public class AnalizadorFuncion {
         if (llaves != 0) {
             return false;
         }
-
-        // Comprobar que no existan paréntesis sin cerrar
+        
         int parentesis = 0;
 
         for (char c : codigo.toCharArray()) {

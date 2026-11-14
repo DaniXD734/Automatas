@@ -1,2 +1,0 @@
-int edad = 20;
-float precio = 150;
